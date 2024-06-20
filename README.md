@@ -32,3 +32,18 @@ Ensure you have the following installed on your local development machine:
    git clone https://github.com/yourusername/order-management-system.git
    cd order-management-system
 
+2. **Install dependencies:**:
+    ```bash
+    npm install
+
+## Database Setup
+
+1. **Ensure PostgreSQL is running.**
+2. **Create a new PostgreSQL database**:
+    ```sql
+    CREATE DATABASE order_management_system;
+
+3. **Configure the .env file with your PostgreSQL connection string**:
+    ```bash
+    DATABASE_URL="postgresql://user:password@localhost:5432/order_management_system"
+
