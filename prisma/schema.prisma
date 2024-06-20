@@ -1,0 +1,70 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  userId   Int     @id @default(autoincrement())
+  name     String
+  email    String  @unique
+  password String
+  address  String?
+
+  carts   Cart[]
+  orders  Order[]
+}
+
+model Product {
+  productId   Int     @id @default(autoincrement())
+  name        String
+  description String?
+  price       Float
+  stock       Int
+
+  cartItems   CartItem[]
+  orderItems  OrderItem[]
+}
+
+model Order {
+  orderId   Int      @id @default(autoincrement())
+  orderDate DateTime @default(now())
+  status    String
+
+  userId     Int
+  user       User        @relation(fields: [userId], references: [userId])
+  orderItems OrderItem[]
+}
+
+model Cart {
+  cartId   Int    @id @default(autoincrement())
+
+  userId    Int   @unique
+  user      User  @relation(fields: [userId], references: [userId])
+  cartItems CartItem[]
+}
+
+model CartItem {
+  cartItemId Int    @id @default(autoincrement())
+  quantity   Int
+
+  cartId   Int
+  cart     Cart   @relation(fields: [cartId], references: [cartId])
+
+  productId Int
+  product   Product @relation(fields: [productId], references: [productId])
+}
+
+model OrderItem {
+  orderItemId Int    @id @default(autoincrement())
+  quantity    Int
+
+  orderId  Int
+  order    Order  @relation(fields: [orderId], references: [orderId])
+
+  productId Int
+  product   Product @relation(fields: [productId], references: [productId])
+}
