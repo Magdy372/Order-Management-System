@@ -10,7 +10,6 @@ This project implements an Order Management System for an e-commerce mobile appl
 - [Installation](#installation)
 - [Database Setup](#database-setup)
 - [Running the Application](#running-the-application)
-- [Testing](#testing)
 - [API Documentation](#api-documentation)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
@@ -98,8 +97,3 @@ To contribute:
 2. Create a new branch for your feature or bug fix.
 3. Make your changes and test them thoroughly.
 4. Push your changes to your fork and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
