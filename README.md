@@ -10,6 +10,7 @@ This project implements an Order Management System for an e-commerce mobile appl
 - [Installation](#installation)
 - [Database Setup](#database-setup)
 - [Running the Application](#running-the-application)
+- [Testing](#Testing)
 - [API Documentation](#api-documentation)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
@@ -63,7 +64,13 @@ Ensure you have the following installed on your local development machine:
     ```bash
     npm run start:dev
 
-    The application will be running at http://localhost:3000.
+    The application will be running at `http://localhost:3000`.
+
+
+## Testing
+You can test the application using
+    ```bash
+    npm run test
 
 
 ## API Documentation
