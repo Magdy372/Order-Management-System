@@ -36,8 +36,6 @@ Ensure you have the following installed on your local development machine:
 2. **Install dependencies:**:
     ```bash
     npm install
-
-
 ## Database Setup
 
 1. **Ensure PostgreSQL is running.**
@@ -56,23 +54,16 @@ Ensure you have the following installed on your local development machine:
 5. **Generate Prisma client**:
     ```bash
     npx prisma generate
-
-
-
 ## Running the Application
 1. **Start the NestJS application**:
     ```bash
     npm run start:dev
 
-    The application will be running at `http://localhost:3000`.
-
-
+The application will be running at `http://localhost:3000`.
 ## Testing
-You can test the application using
+**You can test the application using**:
     ```bash
     npm run test
-
-
 ## API Documentation
 
 The API endpoints are documented using Swagger. You can access the Swagger UI to explore and interact with the APIs.
